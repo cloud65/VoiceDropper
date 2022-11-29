@@ -1,0 +1,12 @@
+[Unit]
+Description=VoiceDropper daemon
+After=network.target 
+
+[Service]
+Type=simple
+WorkingDirectory=/usr/smb-share/telegram
+ExecStart=/usr/smb-share/telegram/venv/bin/python3 /usr/smb-share/telegram/voicedropper.py
+Restart=always
+
+[Install]
+WantedBy=multi-user.target
